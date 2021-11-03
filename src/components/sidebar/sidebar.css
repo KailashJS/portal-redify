@@ -1,0 +1,75 @@
+.sidebar {
+    flex: 1;
+    height: calc(100vh - 50px);
+    position: sticky;
+    top: 50px;
+    background-color: #c82e2e;
+    color: white;
+}
+
+#myInput {
+    /* background-image: url('../../searchIcon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;*/
+    width: 80%;
+    font-size: 20px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.sidebarWrapper {
+    padding: 20px;
+    color: white;
+}
+
+.sidebarMenu {
+    margin-bottom: 10px;
+}
+
+.sidebarTitle {
+    font-size: 13px;
+    color: thistle;
+}
+
+.sidebarList {
+    list-style: none;
+    padding: 5px;
+}
+
+.searchBar {
+    padding: 5px;
+}
+
+.searchButton {
+    width: 60%;
+    font-size: 20px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    background-color: turquoise;
+    color: rgb(7, 99, 53);
+    display: flex;
+    /* align-content: center;
+    align-items: center;*/
+    justify-content: center;
+    border-radius: 10%;
+    margin-left: 3%;
+}
+
+.sidebarListItem {
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.sidebarListItem.active, .sidebarListItem:hover {
+    background-color: violet;
+}
+
+.sidebarIcon {
+    margin-right: 5px;
+    font-size: 20px !important;
+}
