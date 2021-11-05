@@ -5,16 +5,17 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
     return (
         <div className="sidebar">
+            
             <div className="sidebarWrapper">
 
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Search Products</h3>
-                    <ul className="sidebarList">
+                    <ul className="sidebarList" style={{ marginTop: "10px"}}>
                         <li className="searchBar">
                             <input type="text" id="myInput" placeholder="UPC Code" />
                         </li>
                         <span className="or_section" >
-                            <p style={{ marginLeft : "3%"}}>OR</p>
+                            <p style={{ marginLeft : "30%"}}>OR</p>
                         </span>
                         <li className="searchBar">
                             <input type="text" id="myInput" placeholder="Product name"/>
@@ -24,7 +25,7 @@ export default function Sidebar() {
                             <button type="submit" className="searchButton" style={{ cursor: "pointer"}}>Search</button>
                         </li>
                         <li>
-                            <button type="submit" className="searchButton" style={{ backgroundColor: "pink", color: "red", cursor: "pointer"}}>Reset</button>
+                            <button type="submit" className="searchButton" style={{ backgroundColor: "gray", color: "white", cursor: "pointer"}}>Reset</button>
                         </li>
                     </ul>
                 </div>

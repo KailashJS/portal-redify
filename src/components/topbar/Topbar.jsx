@@ -12,7 +12,7 @@ export default function Topbar() {
           <Link className="link" to="/">
             <span className="logo">
               <img src={logo} alt="Logo" className="logo-icon" />
-              Redify Inc.
+              Redify
             </span>
           </Link>
         </div>
