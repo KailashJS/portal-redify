@@ -1,5 +1,5 @@
 import "./sidebar.css"
-import { Assignment, AssignmentInd, AssignmentTurnedIn, Favorite, Home, Info, Person, Phone } from "@material-ui/icons";
+import { Assignment, AssignmentInd, AssignmentTurnedIn, Favorite, Home, Info, Menu, Person, Phone } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -9,7 +9,10 @@ export default function Sidebar() {
             <div className="sidebarWrapper">
 
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Search Products</h3>
+                    <div className="searchTitle" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>
+                        <h3 className="sidebarTitle">Search Products</h3>
+                    <Menu />
+                    </div>
                     <ul className="sidebarList" style={{ marginTop: "10px"}}>
                         <li className="searchBar">
                             <input type="text" id="myInput" placeholder="UPC Code" />
