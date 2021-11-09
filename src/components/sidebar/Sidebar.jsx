@@ -241,36 +241,7 @@ export default function Sidebar() {
                         My Favourite
                       </li>
                     </Link>
-                    <Link to="/aboutUs" className="link">
-                      <li className="sidebarListItem">
-                        <Info className="sidebarIcon" />
-                        About Us
-                      </li>
-                    </Link>
-                    <Link to="/contactUs" className="link">
-                      <li className="sidebarListItem">
-                        <Phone className="sidebarIcon" />
-                        Contact Us
-                      </li>
-                    </Link>
-                    <Link to="/privacyPolicy" className="link">
-                      <li className="sidebarListItem">
-                        <AssignmentInd className="sidebarIcon" />
-                        Privacy Policy
-                      </li>
-                    </Link>
-                    <Link className="link" to="/termsOfUse">
-                      <li className="sidebarListItem">
-                        <Assignment className="sidebarIcon" />
-                        Terms of Use
-                      </li>
-                    </Link>
-                    <Link className="link" to="/take_survey">
-                      <li className="sidebarListItem">
-                        <AssignmentTurnedIn className="sidebarIcon" />
-                        Take Survey
-                      </li>
-                    </Link>
+                    
                   </ul>
                 </div>
               </div>
@@ -278,25 +249,6 @@ export default function Sidebar() {
             </ul>
           </div>
 
-          <div className={classes.toggleTwo}>
-                <div className="sidebarMenu">
-                  <h3 className="sidebarTitle">Quick menus</h3>
-                  <ul className="sidebarList">
-                    <Link to="/" className="link">
-                      <li className="sidebarListItem">
-                        <Home className="sidebarIcon" />
-                        Home
-                      </li>
-                    </Link>
-                    <Link to="/myProfile" className="link">
-                      <li className="sidebarListItem">
-                        <Person className="sidebarIcon" />
-                        My Profile
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-              </div>
 
 
 
