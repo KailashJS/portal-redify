@@ -1,3 +1,5 @@
+import Sidebar from "../../components/sidebar/Sidebar";
+import Topbar from "../../components/topbar/Topbar";
 import "./myFavourite.css";
 import { DataGrid } from '@material-ui/data-grid';
 
@@ -54,8 +56,14 @@ export default function MyFavourite() {
       ];
 
     return (
-        <div className="productList">
-            <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+      <>
+        <Topbar />
+        <div className="container">
+          <Sidebar />
+          <div className="productList">
+              <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+          </div>
         </div>
+      </> 
     )
 }

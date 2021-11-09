@@ -1,14 +1,9 @@
 import "./sidebar.css";
 import {
-  Assignment,
-  AssignmentInd,
-  AssignmentTurnedIn,
   Favorite,
   Home,
-  Info,
   Menu,
   Person,
-  Phone,
 } from "@material-ui/icons";
 import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
@@ -16,7 +11,6 @@ import { Button } from "@material-ui/core";
 import { useState } from "react";
 
 import SimpleAccordion from "../SimpleAccordion";
-
 
 import InputBase from "@material-ui/core/InputBase";
 import { alpha, makeStyles } from "@material-ui/core/styles";
@@ -29,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sidebar: {
     height: "100%",
+    position: "sticky",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -85,9 +80,9 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     marginLeft: theme.spacing(1),
     [theme.breakpoints.down("sm")]: {
-        marginLeft: theme.spacing(1),
-        width: "auto",
-      },
+      marginLeft: theme.spacing(1),
+      width: "auto",
+    },
   },
   menuIcon: {
     display: (props) => (props.open ? "flex" : "none"),
@@ -109,7 +104,6 @@ const useStyles = makeStyles((theme) => ({
     display: (props) => (props.open ? "none" : "flex"),
     height: "100%",
   },
-  
 }));
 
 export default function Sidebar() {
@@ -216,45 +210,36 @@ export default function Sidebar() {
               <li>
                 <SimpleAccordion />
               </li>
-              
 
               <li>
-              <div className={classes.toggleThree}>
-                <div className="sidebarMenu">
-                  <h3 className="sidebarTitle">Widgets</h3>
-                  <ul className="sidebarList">
-                    <Link to="/" className="link">
-                      <li className="sidebarListItem">
-                        <Home className="sidebarIcon" />
-                        Home
-                      </li>
-                    </Link>
-                    <Link to="/myProfile" className="link">
-                      <li className="sidebarListItem">
-                        <Person className="sidebarIcon" />
-                        My Profile
-                      </li>
-                    </Link>
-                    <Link to="/myFavourites" className="link">
-                      <li className="sidebarListItem">
-                        <Favorite className="sidebarIcon" />
-                        My Favourite
-                      </li>
-                    </Link>
-                    
-                  </ul>
+                <div className={classes.toggleThree}>
+                  <div className="sidebarMenu">
+                    <h3 className="sidebarTitle">Widgets</h3>
+                    <ul className="sidebarList">
+                      <Link to="/myFavourites" className="link">
+                        <li className="sidebarListItem">
+                          <Favorite className="sidebarIcon" />
+                          My Favourite
+                        </li>
+                      </Link>
+                      <Link to="/" className="link">
+                        <li className="sidebarListItem">
+                          <Home className="sidebarIcon" />
+                          Home
+                        </li>
+                      </Link>
+                      <Link to="/myProfile" className="link">
+                        <li className="sidebarListItem">
+                          <Person className="sidebarIcon" />
+                          My Profile
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
                 </div>
-              </div>
               </li>
             </ul>
           </div>
-
-
-
-
-          
-
-          
         </div>
       </div>
     </div>
