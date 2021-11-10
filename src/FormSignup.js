@@ -3,6 +3,7 @@ import validate from './validateInfo';
 import useForm from './useForm';
 import './Form.css';
 import { Link } from 'react-router-dom';
+import { Typography } from '@material-ui/core';
 
 const FormSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = useForm(
@@ -66,8 +67,9 @@ const FormSignup = ({ submitForm }) => {
           {errors.password2 && <p>{errors.password2}</p>}
         </div>
         <button className='form-input-btn' type='submit'>
-          Sign up
+          <Typography variant="h4">Sign up</Typography>
         </button>
+
         <span className='form-input-login'>
           Already have an account? Login <Link to="/">here</Link>
         </span>

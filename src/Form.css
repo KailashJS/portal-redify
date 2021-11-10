@@ -74,7 +74,7 @@
 }
 
 .form h1 {
-  font-size: 1rem;
+  font-size: 1.8rem;
   text-align: start;
   width: 80%;
   margin-bottom: 1rem;
@@ -87,14 +87,14 @@
 }
 
 .form-inputs p {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   color: #f00e0e;
 }
 
 .form-label {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-bottom: 6px;
   color: #fff;
 }
@@ -141,15 +141,29 @@
 }
 
 .form-input-login {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   margin-top: 10px;
   color: #fff;
   width: 80%;
   text-align: center;
+}
+
+.form-input-login-success {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #fff;
+  width: 80%;
   margin-left: 200px;
 }
 
+
 .form-input-login a {
+  text-decoration: none;
+  color: #27cdff;
+  font-weight: 600;
+}
+
+.form-input-login-success a {
   text-decoration: none;
   color: #27cdff;
   font-weight: 600;

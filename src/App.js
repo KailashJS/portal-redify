@@ -1,4 +1,5 @@
 import "./app.css";
+import "./sakura.css";
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MyFavourite from "./pages/myFavourite/MyFavourite";

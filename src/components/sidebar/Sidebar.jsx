@@ -1,13 +1,8 @@
 import "./sidebar.css";
-import {
-  Favorite,
-  Home,
-  Menu,
-  Person,
-} from "@material-ui/icons";
+import { Favorite, Home, Menu, Person } from "@material-ui/icons";
 import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
-import { Button } from "@material-ui/core";
+import { Button, Typography } from "@material-ui/core";
 import { useState } from "react";
 
 import SimpleAccordion from "../SimpleAccordion";
@@ -67,6 +62,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     width: "100%",
+    fontSize: "1.6em", // This font-size added/customised by me
     [theme.breakpoints.up("sm")]: {
       width: "12ch",
       "&:focus": {
@@ -84,13 +80,18 @@ const useStyles = makeStyles((theme) => ({
       width: "auto",
     },
   },
+  or: {
+    marginLeft: "40%",
+  },
   menuIcon: {
     display: (props) => (props.open ? "flex" : "none"),
     cursor: "pointer",
+    transform: "scale(2.5)",
   },
   closeIcon: {
     display: (props) => (props.open ? "none" : "flex"),
     cursor: "pointer",
+    transform: "scale(2.5)",
   },
 
   sidebarTitle: {
@@ -153,7 +154,9 @@ export default function Sidebar() {
               </div>
 
               <span className="or_section">
-                <p style={{ marginLeft: "40%" }}>OR</p>
+                <Typography variant="h5" className={classes.or}>
+                  OR
+                </Typography>
               </span>
 
               <div className={classes.search}>
@@ -171,7 +174,9 @@ export default function Sidebar() {
               </div>
 
               <span className="or_section">
-                <p style={{ marginLeft: "40%" }}>OR</p>
+                <Typography variant="h5" className={classes.or}>
+                  OR
+                </Typography>
               </span>
 
               <div className={classes.search}>
@@ -194,7 +199,7 @@ export default function Sidebar() {
                   variant="contained"
                   color="primary"
                 >
-                  Search
+                  <Typography variant="h5">SEARCH</Typography>
                 </Button>
               </li>
               <li>
@@ -203,7 +208,7 @@ export default function Sidebar() {
                   variant="contained"
                   color="secondary"
                 >
-                  RESET
+                  <Typography variant="h5">_RESET</Typography>
                 </Button>
               </li>
 
@@ -219,19 +224,19 @@ export default function Sidebar() {
                       <Link to="/myFavourites" className="link">
                         <li className="sidebarListItem">
                           <Favorite className="sidebarIcon" />
-                          My Favourite
+                          <Typography variant="h4">Favourite</Typography>
                         </li>
                       </Link>
                       <Link to="/" className="link">
                         <li className="sidebarListItem">
                           <Home className="sidebarIcon" />
-                          Home
+                          <Typography variant="h4"> Home </Typography>
                         </li>
                       </Link>
                       <Link to="/myProfile" className="link">
                         <li className="sidebarListItem">
                           <Person className="sidebarIcon" />
-                          My Profile
+                          <Typography variant="h4">Profile</Typography>
                         </li>
                       </Link>
                     </ul>

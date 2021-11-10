@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(22),
     fontWeight: theme.typography.fontWeightRegular,
   },
 }));
@@ -27,7 +27,7 @@ export default function SimpleAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Baby Products</Typography>
+          <Typography className={classes.heading}>Baby Products lorem</Typography>
         </AccordionSummary>
           <Accordion>
               <AccordionSummary
