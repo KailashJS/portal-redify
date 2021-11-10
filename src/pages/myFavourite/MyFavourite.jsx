@@ -2,57 +2,140 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
 import "./myFavourite.css";
 import { DataGrid } from '@material-ui/data-grid';
+import { DeleteOutline } from '@material-ui/icons';
 
 export default function MyFavourite() {
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {
-          field: 'firstName',
-          headerName: 'Product name',
-          width: 150,
-          editable: true,
+          field: 'pro',
+          headerName: 'Product',
+          width: 200,
+          renderCell: (params) => {
+            return (
+              <div className="productListProduct">
+                <img className="productListImage" src={params.row.productImg} alt=""/>
+                {params.row.product}
+              </div>
+
+            )
+          } 
         },
         {
-          field: 'lastName',
+          field: 'category',
           headerName: 'Category',
           width: 150,
           editable: true,
         },
         {
-          field: 'age',
+          field: 'price',
           headerName: 'Price',
-          type: 'number',
           width: 110,
           editable: true,
         },
         {
-          field: 'fullName',
-          headerName: 'Full name',
+          field: 'merchant',
+          headerName: 'Brand',
           description: 'This column has a value getter and is not sortable.',
           sortable: false,
           width: 160,
         },
+        {
+          field: 'action',
+          headerName: 'Action',
+          width: 150,
+          renderCell: (params) => {
+            return (
+              <>
+                <button className="productListBuy">Buy</button>
+                <DeleteOutline className="productListDelete"/>
+              </>
+            )
+          }
+        },
       ];
       
       const rows = [
-        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-        { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-        { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-        { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-        { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-        { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-        { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+        { id: 1, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 2, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 3, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 4, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 5, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 6, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 7, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 8, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 9, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
+        { id: 10, 
+          product: 'Jonson Baby Oil', 
+          productImg:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdHHF9moFrrBTVWBc4qvU4qaP29Rd23deymA&usqp=CAU",
+          category: 'Oil', 
+          price: '$35', 
+          merchant: 'Jonson' 
+        },
       ];
 
     return (
@@ -61,7 +144,7 @@ export default function MyFavourite() {
         <div className="container">
           <Sidebar />
           <div className="productList">
-              <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+              <DataGrid rows={rows} disableSelectionOnClick columns={columns} pageSize={8} checkboxSelection />
           </div>
         </div>
       </> 
