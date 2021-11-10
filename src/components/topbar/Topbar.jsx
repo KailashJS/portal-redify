@@ -27,7 +27,6 @@ export default function Topbar() {
             <div className="topbarIconContainer">
               <Link className="link" to="/settings">
                 <Settings />
-                <span className="topIconBadge">2</span>
               </Link>
             </div>
             <Link className="link" to="/myProfile">

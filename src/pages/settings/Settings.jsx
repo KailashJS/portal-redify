@@ -1,6 +1,7 @@
 import "./settings.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
+import ProfileSection from "../../components/profileSection/ProfileSection";
 
 export default function Settings() {
     return (
@@ -9,7 +10,7 @@ export default function Settings() {
             <div className="container">
                 <Sidebar />
                 <div className="home">
-                    <h1 style={{ paddingTop: "10px", color: "red"}}>Settings Page</h1>
+                    <ProfileSection />
                 </div>
             </div>
         </>

@@ -1,6 +1,7 @@
 import "./myProfile.css";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Topbar from "../../components/topbar/Topbar";
+import ProfileSection from "../../components/profileSection/ProfileSection";
 
 export default function MyProfile() {
     return (
@@ -9,7 +10,7 @@ export default function MyProfile() {
             <div className="container">
                 <Sidebar />
                 <div className="home">
-                    <h1 style={{ paddingTop: "10px", color: "red"}}>My Profile Page</h1>
+                    <ProfileSection />
                 </div>
             </div>
         </>
